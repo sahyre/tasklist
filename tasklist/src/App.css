@@ -1,0 +1,20 @@
+.App-header {
+  text-shadow: 3rem;
+  color: blue;
+  font-style: italic;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 1px;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+.todo {
+  cursor: pointer;
+}
+.button-margin {
+  margin: 20px;
+}

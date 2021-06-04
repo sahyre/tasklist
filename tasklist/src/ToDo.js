@@ -1,4 +1,5 @@
 import React from "react";
+import { Col } from "reactstrap";
 
 const ToDo = ({ todo, handleToggle }) => {
   const handleClick = (e) => {
@@ -7,13 +8,16 @@ const ToDo = ({ todo, handleToggle }) => {
   };
 
   return (
-    <div
-      id={todo.id}
-      onClick={handleClick}
-      className={todo.complete ? "todo strike" : "todo"}
-    >
-      <li> {todo.task}</li>
-    </div>
+    <Col>
+      <li
+        id={todo.id}
+        onClick={handleClick}
+        className={todo.complete ? "todo strike" : "todo"}
+      >
+        {" "}
+        {todo.task}
+      </li>
+    </Col>
   );
 };
 

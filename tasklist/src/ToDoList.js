@@ -1,23 +1,29 @@
 import React from "react";
 import Todo from "./ToDo";
-import { Button } from "reactstrap";
+import { Button, Col, Container, Row } from "reactstrap";
 
 const ToDoList = ({ toDoList, handleFilter, handleToggle }) => {
   return (
-    <div>
-      {toDoList.map((todo) => (
+    <Container>
+      <Row>
         <ul>
-          <Todo
-            todo={todo}
-            key={todo.id + todo.task}
-            handleToggle={handleToggle}
-          />
+          {toDoList.map((todo) => (
+            <Todo todo={todo} key={todo.id} handleToggle={handleToggle} />
+          ))}
         </ul>
-      ))}
-      <Button className="button-margin" color="primary" onClick={handleFilter}>
-        Clear Completed
-      </Button>
-    </div>
+      </Row>
+      <Row>
+        <Col>
+          <Button
+            className="button-margin"
+            color="primary"
+            onClick={handleFilter}
+          >
+            Clear Completed
+          </Button>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
